@@ -7,7 +7,9 @@
     ]
   },
   "scripts": {
-    "dev:web": "yarn workspace web run dev"
+    "dev:web": "yarn workspace web run dev",
+    "prepare": "husky install",
+    "new": "scripts/init.sh"
   },
   "packageManager": "yarn@3.3.0",
   "devDependencies": {
@@ -21,7 +23,6 @@
   },
   "lint-staged": {
     "**/*.+(ts|tsx|js|jsx)": [
-      "eslint --fix --cache",
       "prettier --write"
     ]
   }
