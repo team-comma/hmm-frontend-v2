@@ -1216,7 +1216,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.28.0":
+"eslint@npm:8.28.0, eslint@npm:^8.28.0":
   version: 8.28.0
   resolution: "eslint@npm:8.28.0"
   dependencies:
@@ -1709,6 +1709,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hmm-frontend-v2@workspace:."
   dependencies:
+    eslint: ^8.28.0
     husky: ^8.0.2
     hygen: ^6.2.11
     lint-staged: ^13.0.3
