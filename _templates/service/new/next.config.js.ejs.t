@@ -5,6 +5,7 @@ to: services/<%= name %>/next.config.js
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  pageExtensions: ['tsx'],
 }
 
 module.exports = nextConfig
