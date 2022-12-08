@@ -24,7 +24,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@comma/ds@workspace:packages/ds":
+"@comma/ds@workspace:^, @comma/ds@workspace:packages/ds":
   version: 0.0.0-use.local
   resolution: "@comma/ds@workspace:packages/ds"
   dependencies:
@@ -3788,6 +3788,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:services/web"
   dependencies:
+    "@comma/ds": "workspace:^"
     "@types/node": 18.11.9
     "@types/react": 18.0.25
     "@types/react-dom": 18.0.9
