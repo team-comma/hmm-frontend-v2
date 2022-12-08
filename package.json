@@ -38,8 +38,5 @@
       "eslint --fix --cache",
       "prettier --write"
     ]
-  },
-  "dependencies": {
-    "@stitches/react": "^1.2.8"
   }
 }

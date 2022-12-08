@@ -27,6 +27,8 @@ __metadata:
 "@comma/ds@workspace:packages/ds":
   version: 0.0.0-use.local
   resolution: "@comma/ds@workspace:packages/ds"
+  dependencies:
+    "@stitches/react": ^1.2.8
   languageName: unknown
   linkType: soft
 
@@ -1908,7 +1910,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hmm-frontend-v2@workspace:."
   dependencies:
-    "@stitches/react": ^1.2.8
     "@typescript-eslint/eslint-plugin": ^5.46.0
     "@typescript-eslint/parser": ^5.46.0
     eslint: ^8.28.0

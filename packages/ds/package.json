@@ -1,5 +1,8 @@
 {
   "name": "@comma/ds",
   "version": "0.0.1",
-  "description": "comma design system"
+  "description": "comma design system",
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
+  }
 }

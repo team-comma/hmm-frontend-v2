@@ -16,5 +16,5 @@
     "isolatedModules": true,
     "jsx": "react"
   },
-  "include": ["./services"]
+  "include": ["./services", "./packages"]
 }
