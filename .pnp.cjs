@@ -16,6 +16,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."\
       },\
       {\
+        "name": "@comma/ds",\
+        "reference": "workspace:packages/ds"\
+      },\
+      {\
         "name": "web",\
         "reference": "workspace:services/web"\
       }\
@@ -23,6 +27,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@comma/ds", ["workspace:packages/ds"]],\
       ["hmm-frontend-v2", ["workspace:."]],\
       ["web", ["workspace:services/web"]]\
     ],\
@@ -33,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@stitches/react", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:1.2.8"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["@typescript-eslint/parser", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["eslint", "npm:8.28.0"],\
@@ -73,6 +79,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["regenerator-runtime", "npm:0.13.11"]\
           ],\
           "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@comma/ds", [\
+        ["workspace:packages/ds", {\
+          "packageLocation": "./packages/ds/",\
+          "packageDependencies": [\
+            ["@comma/ds", "workspace:packages/ds"]\
+          ],\
+          "linkType": "SOFT"\
         }]\
       ]],\
       ["@eslint/eslintrc", [\
@@ -310,6 +325,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@rushstack-eslint-patch-npm-1.2.0-917f402e4e-faa749faae.zip/node_modules/@rushstack/eslint-patch/",\
           "packageDependencies": [\
             ["@rushstack/eslint-patch", "npm:1.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@stitches/react", [\
+        ["npm:1.2.8", {\
+          "packageLocation": "./.yarn/cache/@stitches-react-npm-1.2.8-445a1042b8-029795323c.zip/node_modules/@stitches/react/",\
+          "packageDependencies": [\
+            ["@stitches/react", "npm:1.2.8"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:1.2.8", {\
+          "packageLocation": "./.yarn/__virtual__/@stitches-react-virtual-bd1cb6a9e1/0/cache/@stitches-react-npm-1.2.8-445a1042b8-029795323c.zip/node_modules/@stitches/react/",\
+          "packageDependencies": [\
+            ["@stitches/react", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:1.2.8"],\
+            ["@types/react", null],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2531,6 +2568,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hmm-frontend-v2", "workspace:."],\
+            ["@stitches/react", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:1.2.8"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["@typescript-eslint/parser", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["eslint", "npm:8.28.0"],\
