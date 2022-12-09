@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-import { createStitches } from '@stitches/react';
+import {
+  createStitches,
+  VariantProps,
+  PropertyValue,
+  CSS,
+  ScaleValue,
+} from '@stitches/react';
 
 // eslint-disable-next-line import/no-unresolved
 import { colors, sizes, utils, media, reset } from '@/foundation';
@@ -26,3 +32,5 @@ export const {
 export const globalStyles = globalCss({
   ...reset,
 });
+
+export type { VariantProps, PropertyValue, CSS, ScaleValue };
