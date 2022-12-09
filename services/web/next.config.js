@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable */
 /** @type {import('next').NextConfig} */
 const withTM = require('next-transpile-modules')(['@comma/ds']);
 
