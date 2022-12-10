@@ -13,6 +13,7 @@ export const reset = {
 
   body: {
     lineHeight: 1.5,
+    backgroundColor: '$gray-100',
     '-webkit-font-smoothing': 'antialiased',
   },
 
