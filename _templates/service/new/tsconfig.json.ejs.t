@@ -6,7 +6,7 @@ to: services/<%= name %>/tsconfig.json
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"]
+      "@/*": ["./*"]
     },
     "incremental": true,
     "esModuleInterop": true,
