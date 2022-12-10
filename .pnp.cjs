@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/react", "npm:18.0.26"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["@typescript-eslint/parser", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["eslint", "npm:8.28.0"],\
@@ -2735,6 +2736,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hmm-frontend-v2", "workspace:."],\
+            ["@types/react", "npm:18.0.26"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["@typescript-eslint/parser", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["eslint", "npm:8.28.0"],\
@@ -4073,7 +4075,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-dom-virtual-fc94ec00e9/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
           "packageDependencies": [\
             ["react-dom", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:18.2.0"],\
-            ["@types/react", null],\
+            ["@types/react", "npm:18.0.26"],\
             ["loose-envify", "npm:1.4.0"],\
             ["react", "npm:18.2.0"],\
             ["scheduler", "npm:0.23.0"]\

@@ -2040,6 +2040,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hmm-frontend-v2@workspace:."
   dependencies:
+    "@types/react": ^18.0.26
     "@typescript-eslint/eslint-plugin": ^5.46.0
     "@typescript-eslint/parser": ^5.46.0
     eslint: ^8.28.0
