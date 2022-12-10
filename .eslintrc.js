@@ -80,6 +80,12 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
-    'import/resolver': { typescript: {} },
+    'import/resolver': {
+      typescript: {
+        node: {
+          extensions: ['.ts', '.tsx', '.native.js'],
+        },
+      },
+    },
   },
 };
