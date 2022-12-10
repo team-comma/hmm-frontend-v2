@@ -6,6 +6,10 @@
   "module": "src/index.ts",
   "sideEffects": false,
   "dependencies": {
-    "@stitches/react": "^1.2.8"
+    "@stitches/react": "^1.2.8",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26"
   }
 }
