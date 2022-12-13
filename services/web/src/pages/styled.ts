@@ -18,3 +18,11 @@ export const ServiceIntroContainer = styled('div', {
   justifyContent: 'center',
   flexDirection: 'column',
 });
+
+export const OnBoardingBottomSheet = styled('div', {
+  width: '100%',
+  flex: '1',
+  display: 'flex',
+  justifyContent: 'space-between',
+  padding: '28px 19px',
+});
