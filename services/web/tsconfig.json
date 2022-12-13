@@ -2,13 +2,14 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "typeRoots": ["./@types/index.d.ts"],
     "paths": {
       "@/*": ["./*"]
     },
     "incremental": true,
     "esModuleInterop": true,
-    "jsx": "preserve"
-    
+    "jsx": "preserve",
+    "skipLibCheck": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

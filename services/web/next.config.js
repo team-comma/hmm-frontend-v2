@@ -2,12 +2,16 @@
 /** @type {import('next').NextConfig} */
 const withTM = require('next-transpile-modules')(['@comma/ds']);
 
+const withPlugins = require('next-compose-plugins');
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['tsx'],
 };
 
-module.exports = withTM({
-  nextConfig,
-});
+module.exports = withPlugins([
+  withTM({
+    nextConfig,
+  }),
+]);
