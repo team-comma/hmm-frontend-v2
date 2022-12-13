@@ -25,7 +25,6 @@ module.exports = {
     'no-use-before-define': 'off',
     'no-useless-constructor': 'off',
     'no-return-await': 'off',
-
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
@@ -33,7 +32,12 @@ module.exports = {
     '@typescript-eslint/no-useless-constructor': 'error',
 
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['.svg'],
+      },
+    ],
     'import/order': [
       'error',
       {
@@ -83,7 +87,7 @@ module.exports = {
     'import/resolver': {
       typescript: {
         node: {
-          extensions: ['.ts', '.tsx', '.native.js'],
+          extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg'],
         },
       },
     },

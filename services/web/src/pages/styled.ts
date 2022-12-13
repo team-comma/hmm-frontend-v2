@@ -25,4 +25,5 @@ export const OnBoardingBottomSheet = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   padding: '28px 19px',
+  gap: '10px',
 });

@@ -2,9 +2,12 @@ import React from 'react';
 
 import type { NextPage } from 'next';
 
-import { AppLayout } from '@comma/ds';
+import { AppLayout, Button } from '@comma/ds';
 
 import * as S from './styled';
+
+import HomeIconSVG from '@/src/assets/home.svg';
+import KakaoIconSVG from '@/src/assets/kakao.svg';
 
 const OnBoardingPage: NextPage = () => {
   return (
@@ -21,10 +24,10 @@ const OnBoardingPage: NextPage = () => {
           </div>
         </S.ServiceIntroContainer>
         <S.OnBoardingBottomSheet>
-          <button>
-            <img />
-          </button>
-          <button>카카오로 시작하기</button>
+          <Button icon={HomeIconSVG} size="md" />
+          <Button icon={KakaoIconSVG} size="md" fullWidth interval>
+            카카오로 시작하기
+          </Button>
         </S.OnBoardingBottomSheet>
       </S.OnBoardingContainer>
     </AppLayout>
