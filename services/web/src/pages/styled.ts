@@ -1,4 +1,8 @@
-import { styled } from '@comma/ds';
+import { Button, styled } from '@comma/ds';
+
+export const IconButton = styled(Button, {
+  padding: '0 14px !important',
+});
 
 export const OnBoardingContainer = styled('div', {
   flex: '1',
