@@ -1,6 +1,7 @@
 import React from 'react';
 
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 
 import { AppLayout, Button } from '@comma/ds';
 
@@ -10,6 +11,14 @@ import KakaoIconSVG from '@/src/assets/kakao.svg';
 import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {
+  const router = useRouter();
+
+  const kakaoUrl = process.env.NEXT_PUBLIC_KAKAO_API_END_POINT as string;
+
+  const handleClickKakaoLogin = () => {
+    router.replace(kakaoUrl);
+  };
+
   return (
     <AppLayout>
       <S.OnBoardingContainer>
@@ -31,6 +40,7 @@ const OnBoardingPage: NextPage = () => {
             size="md"
             interval
             fullWidth
+            onClick={handleClickKakaoLogin}
           >
             카카오로 시작하기
           </Button>

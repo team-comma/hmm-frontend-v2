@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
 
-import type * as Stitches from '@stitches/react';
 import { Variants } from 'framer-motion';
 
 import * as S from './styled';
@@ -9,7 +8,7 @@ type SocialType = 'kakao';
 
 type ButtonThemeType = 'default';
 
-interface ButtonProps extends Stitches.VariantProps<typeof S.ButtonElement> {
+interface ButtonProps extends React.ComponentProps<typeof S.ButtonElement> {
   icon?: string | StaticImageData;
   loading?: boolean;
   disabled?: boolean;
