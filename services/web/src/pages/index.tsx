@@ -25,7 +25,13 @@ const OnBoardingPage: NextPage = () => {
         </S.ServiceIntroContainer>
         <S.OnBoardingBottomSheet>
           <S.IconButton icon={HomeIconSVG} size="md" />
-          <Button icon={KakaoIconSVG} size="md" fullWidth interval>
+          <Button
+            theme="kakao"
+            icon={KakaoIconSVG}
+            size="md"
+            interval
+            fullWidth
+          >
             카카오로 시작하기
           </Button>
         </S.OnBoardingBottomSheet>

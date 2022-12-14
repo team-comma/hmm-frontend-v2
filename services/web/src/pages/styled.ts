@@ -1,7 +1,7 @@
 import { Button, styled } from '@comma/ds';
 
 export const IconButton = styled(Button, {
-  padding: '0 14px !important',
+  padding: '0 12px !important',
 });
 
 export const OnBoardingContainer = styled('div', {
