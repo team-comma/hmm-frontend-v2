@@ -182,6 +182,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/eslint-plugin-next@npm:^13.0.6":
+  version: 13.0.6
+  resolution: "@next/eslint-plugin-next@npm:13.0.6"
+  dependencies:
+    glob: 7.1.7
+  checksum: 0f6964513af4fd6051974e6c1542d2660ac9cc0e89c4774e793ede0e3e3f8e158826bf9ae06aa29741c4c4a22bed7ddf3db265ee21a8593ba7d53f39014764f0
+  languageName: node
+  linkType: hard
+
 "@next/swc-android-arm-eabi@npm:13.0.4":
   version: 13.0.4
   resolution: "@next/swc-android-arm-eabi@npm:13.0.4"
@@ -2191,6 +2200,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hmm-frontend-v2@workspace:."
   dependencies:
+    "@next/eslint-plugin-next": ^13.0.6
     "@types/react": ^18.0.26
     "@typescript-eslint/eslint-plugin": ^5.46.0
     "@typescript-eslint/parser": ^5.46.0
