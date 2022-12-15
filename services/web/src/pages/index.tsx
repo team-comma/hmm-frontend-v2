@@ -4,10 +4,10 @@ import type { NextPage } from 'next';
 
 import { AppLayout, Button } from '@comma/ds';
 
-import * as S from './styled';
-
 import HomeIconSVG from '@/src/assets/home.svg';
 import KakaoIconSVG from '@/src/assets/kakao.svg';
+
+import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {
   return (
