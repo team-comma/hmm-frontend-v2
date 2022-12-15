@@ -1,4 +1,3 @@
-import React from 'next';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 import { getCssText } from '@comma/ds';
@@ -9,7 +8,7 @@ export default class MyDocument extends Document {
       <Html lang="ko">
         <Head>
           <link
-            href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            href="https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
             rel="stylesheet"
             type="text/css"
           />
@@ -23,7 +22,6 @@ export default class MyDocument extends Document {
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
-          <title>Hmm - 우리 같이 들어요!</title>
         </Head>
         <body>
           <Main />

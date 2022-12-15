@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@next/eslint-plugin-next", "npm:13.0.6"],\
             ["@types/react", "npm:18.0.26"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["@typescript-eslint/parser", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
@@ -255,6 +256,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@next-eslint-plugin-next-npm-13.0.4-3ba4ec9bff-012afa22ce.zip/node_modules/@next/eslint-plugin-next/",\
           "packageDependencies": [\
             ["@next/eslint-plugin-next", "npm:13.0.4"],\
+            ["glob", "npm:7.1.7"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:13.0.6", {\
+          "packageLocation": "./.yarn/cache/@next-eslint-plugin-next-npm-13.0.6-828540c524-0f6964513a.zip/node_modules/@next/eslint-plugin-next/",\
+          "packageDependencies": [\
+            ["@next/eslint-plugin-next", "npm:13.0.6"],\
             ["glob", "npm:7.1.7"]\
           ],\
           "linkType": "HARD"\
@@ -2913,6 +2922,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hmm-frontend-v2", "workspace:."],\
+            ["@next/eslint-plugin-next", "npm:13.0.6"],\
             ["@types/react", "npm:18.0.26"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
             ["@typescript-eslint/parser", "virtual:9f75c9251e30592f8f254d6443dc2c70cab18467ee0640d02767bab06333b22389a0e31ba777ac44afebc073776cb41805330d43037d1f702db643deb9660b0d#npm:5.46.0"],\
