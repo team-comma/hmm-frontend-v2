@@ -1,4 +1,3 @@
-import React from 'next';
 import { AppProps } from 'next/app';
 
 import { globalStyles } from '@comma/ds';
