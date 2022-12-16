@@ -1,13 +1,14 @@
 import React from 'react';
 
 import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
+import Image, { StaticImageData } from 'next/image';
 
 import { AppLayout, Button } from '@comma/ds';
 import { motion } from 'framer-motion';
 
 import HomeIconSVG from '@/src/assets/home.svg';
 import KakaoIconSVG from '@/src/assets/kakao.svg';
+import NoteEmojiSVG from '@/src/assets/note.svg';
 
 import * as S from './styled';
 
@@ -46,7 +47,7 @@ const OnBoardingPage: NextPage = () => {
           <div>
             <S.Title>
               <S.Note variants={getNoteAnimationVariants()} animate="animate">
-                🎵
+                <Image src={NoteEmojiSVG} width={35} height={35} alt="음표" />
               </S.Note>
               <br />
               흠으로 <br />

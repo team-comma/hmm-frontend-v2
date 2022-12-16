@@ -47,7 +47,7 @@ export const SubTitle = styled('p', {
 // export const ㄴ;
 
 export const Note = styled(motion.div, {
-  paddingBottom: '10px',
+  paddingBottom: '5px',
   paddingRight: '20px',
   display: 'inline-block',
 });
