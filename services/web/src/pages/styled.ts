@@ -12,6 +12,7 @@ export const OnBoardingContainer = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   textAlign: 'center',
+  position: 'relative',
   height: '100%',
 });
 
@@ -21,7 +22,6 @@ export const ServiceIntroContainer = styled('div', {
   display: 'flex',
   textAlign: 'center',
   flexDirection: 'column',
-  position: 'relative',
   padding: '38px 0',
 });
 
@@ -35,13 +35,14 @@ export const OnBoardingBottomSheet = styled('div', {
   padding: '20px 19px',
   gap: '10px',
   bottom: 0,
+  zIndex: 9999,
 });
 
 export const Title = styled('h1', {
   fontFamily: 'jua',
   fontWeight: 'unset',
   fontSize: '$x10',
-  lineHeight: '2.8rem',
+  lineHeight: '2.65rem',
   marginBottom: '0.35em',
 });
 

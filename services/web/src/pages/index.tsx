@@ -57,8 +57,8 @@ const OnBoardingPage: NextPage = () => {
             아무도 모르게 내가 점심 시간에 <br />
             듣고 싶은 노래를 공유해봐요
           </S.SubTitle>
-          <S.AstronautLottie loop animationData={AstronautJSON} play />
         </S.ServiceIntroContainer>
+        <S.AstronautLottie loop animationData={AstronautJSON} play />
         <S.OnBoardingBottomSheet
           as={motion.div}
           initial={{ opacity: 0 }}
