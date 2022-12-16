@@ -72,7 +72,6 @@ const OnBoardingPage: NextPage = () => {
             size="md"
             interval
             fullWidth
-            onClick={handleClickKakaoLogin}
           >
             카카오로 시작하기
           </Button>
