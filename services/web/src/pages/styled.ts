@@ -1,4 +1,5 @@
 import { Button, styled } from '@comma/ds';
+import { motion } from 'framer-motion';
 
 export const IconButton = styled(Button, {
   padding: '0 12px !important',
@@ -17,10 +18,9 @@ export const ServiceIntroContainer = styled('div', {
   width: '100%',
   height: '100%',
   display: 'flex',
-  textAlign: 'center',
-  alignItems: 'center',
-  justifyContent: 'center',
+  textAlign: 'left',
   flexDirection: 'column',
+  padding: '60px 19px',
 });
 
 export const OnBoardingBottomSheet = styled('div', {
@@ -30,4 +30,24 @@ export const OnBoardingBottomSheet = styled('div', {
   justifyContent: 'space-between',
   padding: '28px 19px',
   gap: '10px',
+});
+
+export const Title = styled('h1', {
+  fontFamily: 'jua',
+  fontWeight: 'unset',
+  fontSize: '$x10',
+  lineHeight: '2.5rem',
+  marginBottom: '0.6rem',
+});
+
+export const SubTitle = styled('p', {
+  fontWeight: '500',
+});
+
+// export const ㄴ;
+
+export const Note = styled(motion.div, {
+  paddingBottom: '10px',
+  paddingRight: '20px',
+  display: 'inline-block',
 });

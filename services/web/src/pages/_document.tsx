@@ -18,6 +18,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200;300;400;700;800&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+            rel="stylesheet"
+          />
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
