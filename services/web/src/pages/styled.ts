@@ -1,3 +1,5 @@
+import Lottie from 'react-lottie-player';
+
 import { Button, styled } from '@comma/ds';
 import { motion } from 'framer-motion';
 
@@ -6,7 +8,6 @@ export const IconButton = styled(Button, {
 });
 
 export const OnBoardingContainer = styled('div', {
-  flex: '1',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -18,18 +19,22 @@ export const ServiceIntroContainer = styled('div', {
   width: '100%',
   height: '100%',
   display: 'flex',
-  textAlign: 'left',
+  textAlign: 'center',
   flexDirection: 'column',
-  padding: '60px 19px',
+  position: 'relative',
+  padding: '25px',
 });
 
 export const OnBoardingBottomSheet = styled('div', {
   width: '100%',
-  flex: '1',
   display: 'flex',
+  maxWidth: '32rem',
+  position: 'fixed',
   justifyContent: 'space-between',
-  padding: '28px 19px',
+  background: 'linear-gradient(0deg,#fff 80%,hsla(0,0%,100%,0))',
+  padding: '20px 19px',
   gap: '10px',
+  bottom: 0,
 });
 
 export const Title = styled('h1', {
@@ -37,17 +42,19 @@ export const Title = styled('h1', {
   fontWeight: 'unset',
   fontSize: '$x10',
   lineHeight: '2.5rem',
-  marginBottom: '0.6rem',
+  marginBottom: '0.2em',
 });
 
 export const SubTitle = styled('p', {
   fontWeight: '500',
 });
 
-// export const ㄴ;
-
 export const Note = styled(motion.div, {
   paddingBottom: '5px',
-  paddingRight: '20px',
   display: 'inline-block',
+});
+
+export const AstronautLottie = styled(Lottie, {
+  position: 'absolute',
+  top: '190px',
 });

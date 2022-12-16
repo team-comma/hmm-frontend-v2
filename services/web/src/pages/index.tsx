@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from 'react';
 
 import type { NextPage } from 'next';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import { AppLayout, Button } from '@comma/ds';
 import { motion } from 'framer-motion';
 
+import AstronautJSON from '@/src/assets/astronaut.json';
 import HomeIconSVG from '@/src/assets/home.svg';
 import KakaoIconSVG from '@/src/assets/kakao.svg';
 import NoteEmojiSVG from '@/src/assets/note.svg';
@@ -31,7 +33,6 @@ const OnBoardingPage: NextPage = () => {
       opacity: 1,
       transition: { delay: 1 / 50 },
     },
-    whileTap: { backgroundColor: 'white' },
   });
 
   return (
@@ -42,24 +43,21 @@ const OnBoardingPage: NextPage = () => {
           variants={getServiceIntroVariants()}
           initial="initial"
           animate="animate"
-          whileTap="whileTap"
         >
-          <div>
-            <S.Title>
-              <S.Note variants={getNoteAnimationVariants()} animate="animate">
-                <Image src={NoteEmojiSVG} width={35} height={35} alt="음표" />
-              </S.Note>
-              <br />
-              흠으로 <br />
-              점심 시간에 <br />
-              같이 들어요!
-            </S.Title>
-            <img></img>
-          </div>
+          <S.Title>
+            <S.Note variants={getNoteAnimationVariants()} animate="animate">
+              <Image src={NoteEmojiSVG} width={35} height={35} alt="음표" />
+            </S.Note>
+            <br />
+            흠으로 <br />
+            점심 시간에 <br />
+            같이 음악 들어요!
+          </S.Title>
           <S.SubTitle>
-            누구도 모르게 내가 점심 시간에 <br />
+            아무도 모르게 내가 점심 시간에 <br />
             듣고 싶은 노래를 공유해봐요
           </S.SubTitle>
+          <S.AstronautLottie loop animationData={AstronautJSON} play />
         </S.ServiceIntroContainer>
         <S.OnBoardingBottomSheet
           as={motion.div}

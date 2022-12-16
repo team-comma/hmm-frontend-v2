@@ -6,6 +6,7 @@ export const AppLayoutContainer = styled('main', {
   maxWidth: '32rem',
   padding: '0.5rem 0.5rem 0 0.5rem',
   backgroundColor: '$basic-white',
+  overflowY: 'auto',
 });
 
 export const PageTitle = styled('h1', {});
