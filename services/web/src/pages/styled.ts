@@ -22,7 +22,7 @@ export const ServiceIntroContainer = styled('div', {
   textAlign: 'center',
   flexDirection: 'column',
   position: 'relative',
-  padding: '25px',
+  padding: '38px 0',
 });
 
 export const OnBoardingBottomSheet = styled('div', {
@@ -41,8 +41,8 @@ export const Title = styled('h1', {
   fontFamily: 'jua',
   fontWeight: 'unset',
   fontSize: '$x10',
-  lineHeight: '2.5rem',
-  marginBottom: '0.2em',
+  lineHeight: '2.8rem',
+  marginBottom: '0.35em',
 });
 
 export const SubTitle = styled('p', {
@@ -56,5 +56,5 @@ export const Note = styled(motion.div, {
 
 export const AstronautLottie = styled(Lottie, {
   position: 'absolute',
-  top: '190px',
+  top: '230px',
 });
