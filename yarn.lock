@@ -2817,6 +2817,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-web@npm:^5.7.6":
+  version: 5.10.0
+  resolution: "lottie-web@npm:5.10.0"
+  checksum: f590581b59437ffac984ee3fe3deaa03aa0d6f97b37443a9fd5f42c5e237fc40de8713685b075a90723d421db9d0b4dcabd1f48ae2fc1335d4beb123149561f6
+  languageName: node
+  linkType: hard
+
 "lower-case-first@npm:^1.0.0":
   version: 1.0.2
   resolution: "lower-case-first@npm:1.0.2"
@@ -3515,6 +3522,19 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-lottie-player@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "react-lottie-player@npm:1.5.0"
+  dependencies:
+    fast-deep-equal: ^3.1.3
+    lottie-web: ^5.7.6
+    rfdc: ^1.3.0
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 6bf5cc55fd8a011a4dd9b7b698e971f33c669ac8e1a757ed6f32952b04104c531fed78fbd879eec5f1ed0d040e2ca8495b7b1879b2b0b62f4b1cc53ef8fca613
   languageName: node
   linkType: hard
 
@@ -4271,6 +4291,7 @@ __metadata:
     next-transpile-modules: ^10.0.0
     react: 18.2.0
     react-dom: 18.2.0
+    react-lottie-player: ^1.5.0
     typescript: 4.9.3
   languageName: unknown
   linkType: soft
