@@ -31,7 +31,8 @@ export const OnBoardingBottomSheet = styled('div', {
   maxWidth: '32rem',
   position: 'fixed',
   justifyContent: 'space-between',
-  background: 'linear-gradient(0deg,#fff 80%,hsla(0,0%,100%,0))',
+  background:
+    'linear-gradient(0deg, rgb(255, 255, 255, 0.9) 80%, hsla(0,0%,100%,0))',
   padding: '20px 19px',
   gap: '10px',
   bottom: 0,
