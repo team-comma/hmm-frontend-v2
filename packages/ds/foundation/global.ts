@@ -1,8 +1,7 @@
 export const reset = {
   '*': {
     margin: 0,
-
-    fontFamily: "'Spoqa Han Sans', 'Spoqa Han Sans KR', 'Sans-serif'",
+    fontFamily: "'Spoqa Han Sans Neo', 'Noto Sans KR', 'sans-serif'",
   },
 
   [`*, *::before, *::after`]: {
