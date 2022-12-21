@@ -1,11 +1,19 @@
-import { styled } from '@comma/ds';
+import Lottie from 'react-lottie-player';
+
+import { Button, styled } from '@comma/ds';
+
+import { motion } from 'framer-motion';
+
+export const IconButton = styled(Button, {
+  padding: '0 12px !important',
+});
 
 export const OnBoardingContainer = styled('div', {
-  flex: '1',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   textAlign: 'center',
+  position: 'relative',
   height: '100%',
 });
 
@@ -14,16 +22,41 @@ export const ServiceIntroContainer = styled('div', {
   height: '100%',
   display: 'flex',
   textAlign: 'center',
-  alignItems: 'center',
-  justifyContent: 'center',
   flexDirection: 'column',
+  padding: '20px 0',
 });
 
 export const OnBoardingBottomSheet = styled('div', {
   width: '100%',
-  flex: '1',
   display: 'flex',
+  maxWidth: '29rem',
+  position: 'fixed',
   justifyContent: 'space-between',
-  padding: '28px 19px',
+  background:
+    'linear-gradient(0deg, rgb(22, 26, 26, 0.9) 80%, hsla(0,0%,100%,0))',
+  padding: '20px 19px',
   gap: '10px',
+  bottom: 0,
+});
+
+export const Title = styled('h1', {
+  fontFamily: 'jua',
+  fontWeight: 'unset',
+  fontSize: '$x10',
+  lineHeight: '2.65rem',
+  marginBottom: '0.35em',
+});
+
+export const SubTitle = styled('p', {
+  fontWeight: '500',
+});
+
+export const Note = styled(motion.div, {
+  paddingBottom: '5px',
+  display: 'inline-block',
+});
+
+export const AstronautLottie = styled(Lottie, {
+  position: 'absolute',
+  top: '200px',
 });

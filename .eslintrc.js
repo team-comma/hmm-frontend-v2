@@ -22,12 +22,7 @@ module.exports = {
     'no-return-await': 'off',
 
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    'import/no-unresolved': [
-      'error',
-      {
-        ignore: ['.svg'],
-      },
-    ],
+    'import/no-unresolved': ['error'],
     'import/order': [
       'error',
       {

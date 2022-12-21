@@ -14,8 +14,12 @@ export const reset = {
 
   body: {
     lineHeight: 1.5,
-    backgroundColor: '$gray-100',
-    '-webkit-font-smoothing': 'antialiased',
+    backgroundColor: '$primary-slate2',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 
   [`img, picture, video, canvas, svg`]: {
