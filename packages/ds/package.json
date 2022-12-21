@@ -2,8 +2,6 @@
   "name": "@comma/ds",
   "version": "0.0.1",
   "description": "comma design system",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
   "sideEffects": false,
   "dependencies": {
     "@stitches/react": "^1.2.8",
