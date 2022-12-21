@@ -1,12 +1,11 @@
-import Image, { StaticImageData } from 'next/image';
-
 import type * as Stitches from '@stitches/react';
 import { Variants } from 'framer-motion';
 
+import { Image, ImageProps } from '../Image';
 import * as S from './styled';
 
 interface ButtonProps extends Stitches.VariantProps<typeof S.ButtonElement> {
-  icon?: string | StaticImageData;
+  icon?: ImageProps['src'];
   loading?: boolean;
   disabled?: boolean;
   fullWidth?: boolean;
