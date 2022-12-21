@@ -9,9 +9,10 @@
   },
   "scripts": {
     "lint": "eslint \"{services,packages}/**/*.{js,jsx,ts,tsx}\" --fix --cache",
-    "dev:web": "yarn workspace web run dev",
     "prepare": "husky install",
-    "new": "scripts/init.sh"
+    "new": "scripts/init.sh",
+    "@comma/admin": "yarn workspace @comma/admin",
+    "@comma/web": "yarn workspace @comma/web"
   },
   "packageManager": "yarn@3.3.0",
   "devDependencies": {
