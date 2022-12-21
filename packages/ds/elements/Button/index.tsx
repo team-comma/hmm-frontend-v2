@@ -1,4 +1,3 @@
-import type * as Stitches from '@stitches/react';
 import { Variants } from 'framer-motion';
 
 import { Image, ImageProps } from '../Image';

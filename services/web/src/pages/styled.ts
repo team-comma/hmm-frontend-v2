@@ -1,6 +1,7 @@
 import Lottie from 'react-lottie-player';
 
 import { Button, styled } from '@comma/ds';
+
 import { motion } from 'framer-motion';
 
 export const IconButton = styled(Button, {

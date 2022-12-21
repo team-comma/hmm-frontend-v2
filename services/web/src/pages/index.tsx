@@ -5,6 +5,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 
 import { AppLayout, Button } from '@comma/ds';
+
 import { motion } from 'framer-motion';
 
 import AstronautJSON from '@/src/assets/astronaut.json';
