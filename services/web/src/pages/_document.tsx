@@ -8,18 +8,14 @@ export default class MyDocument extends Document {
       <Html lang="ko">
         <Head>
           <link
-            href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            href="https//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
             rel="stylesheet"
             type="text/css"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin=""
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200;300;400;700;800&display=swap"
             rel="stylesheet"
           />
           <link

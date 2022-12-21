@@ -1,7 +1,7 @@
-import type * as Stitches from '@stitches/react';
+import Image, { StaticImageData } from 'next/image';
+
 import { Variants } from 'framer-motion';
 
-import { Image, ImageProps } from '../Image';
 import * as S from './styled';
 
 type SocialType = 'kakao';
@@ -9,7 +9,7 @@ type SocialType = 'kakao';
 type ButtonThemeType = 'default';
 
 interface ButtonProps extends React.ComponentProps<typeof S.ButtonElement> {
-  icon?: ImageProps['src'];
+  icon?: string | StaticImageData;
   loading?: boolean;
   disabled?: boolean;
   fullWidth?: boolean;
