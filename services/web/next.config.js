@@ -1,13 +1,11 @@
-/* eslint-disable */
 /** @type {import('next').NextConfig} */
-const withTM = require('next-transpile-modules')(['@comma/ds']);
-
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
   pageExtensions: ['tsx'],
+  experimental: {
+    transpilePackages: ['@comma/ds'],
+  },
 };
 
-module.exports = withTM({
-  nextConfig,
-});
+module.exports = nextConfig;

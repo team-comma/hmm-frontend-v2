@@ -1,3 +1,7 @@
+const {
+  generateESLintConfigForAllPackages,
+} = require('./scripts/eslint/helper');
+
 module.exports = {
   root: true,
 
@@ -6,16 +10,7 @@ module.exports = {
     browser: true,
   },
 
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: ['./tsconfig.json'],
-  },
-
-  extends: [
-    'prettier',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-  ],
+  extends: ['prettier'],
   plugins: ['prettier', 'import', 'react', 'react-hooks', 'jsx-a11y'],
 
   rules: {
@@ -26,14 +21,8 @@ module.exports = {
     'no-useless-constructor': 'off',
     'no-return-await': 'off',
 
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-floating-promises': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-use-before-define': ['error', { variables: false }],
-    '@typescript-eslint/no-useless-constructor': 'error',
-
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': ['error'],
     'import/order': [
       'error',
       {
@@ -52,6 +41,11 @@ module.exports = {
           },
           {
             pattern: '{next*,next*/**}',
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: '@comma/**',
             group: 'external',
             position: 'before',
           },
@@ -75,17 +69,54 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
   },
 
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/no-use-before-define': [
+          'error',
+          { variables: false },
+        ],
+        '@typescript-eslint/no-useless-constructor': 'error',
+      },
+      parserOptions: {
+        project: [
+          './tsconfig.json',
+          './packages/**/tsconfig.json',
+          './services/**/tsconfig.json',
+        ],
+      },
+    },
+    ...generateESLintConfigForAllPackages(__dirname, {
+      'services/web': {
+        extends: ['plugin:@next/next/recommended'],
+        settings: {
+          next: {
+            rootDir: 'services/web/',
+          },
+          react: {
+            version: 'detect',
+          },
+        },
+      },
+    }),
+  ],
+
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.js', '.jsx'],
     },
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
     'import/resolver': {
-      typescript: {
-        node: {
-          extensions: ['.ts', '.tsx', '.native.js'],
-        },
-      },
+      typescript: {},
     },
   },
 };
