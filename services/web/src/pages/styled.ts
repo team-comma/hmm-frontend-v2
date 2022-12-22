@@ -26,6 +26,11 @@ export const ServiceIntroContainer = styled('div', {
   padding: '55px 33px 0',
 });
 
+export const ServiceIntroWrapper = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+});
+
 export const OnBoardingBottomSheet = styled('div', {
   width: '100%',
   display: 'flex',

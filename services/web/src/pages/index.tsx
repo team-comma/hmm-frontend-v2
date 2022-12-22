@@ -26,23 +26,27 @@ const OnBoardingPage: NextPage = () => {
   return (
     <AppLayout>
       <S.OnBoardingContainer>
-        <S.ServiceIntroContainer
-          as={motion.div}
-          variants={getServiceIntroVariants()}
-          initial="initial"
-          animate="animate"
-        >
-          <S.Title>
-            흠과 함께
-            <br />
-            하는 점심시간!
-          </S.Title>
-          <S.SubTitle>
-            누구도 모르게 내가 점심 시간에
-            <br /> 듣고 싶은 노래를 공유해봐요
-          </S.SubTitle>
-          <Image src={ServiceIconSVG} alt="service 온보딩 이미지" />
-        </S.ServiceIntroContainer>
+        <S.ServiceIntroWrapper>
+          <S.ServiceIntroContainer
+            as={motion.div}
+            variants={getServiceIntroVariants()}
+            initial="initial"
+            animate="animate"
+          >
+            <S.Title>
+              흠과 함께
+              <br />
+              하는 점심시간!
+            </S.Title>
+            <S.SubTitle>
+              누구도 모르게 내가 점심 시간에
+              <br /> 듣고 싶은 노래를 공유해봐요
+            </S.SubTitle>
+          </S.ServiceIntroContainer>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Image src={ServiceIconSVG} alt="service 온보딩 이미지" />
+          </motion.div>
+        </S.ServiceIntroWrapper>
         <S.OnBoardingBottomSheet
           as={motion.div}
           initial={{ opacity: 0 }}
