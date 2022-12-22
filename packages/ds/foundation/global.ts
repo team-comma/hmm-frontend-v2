@@ -14,7 +14,7 @@ export const reset = {
 
   body: {
     lineHeight: 1.5,
-    backgroundColor: '$primary-slate2',
+    backgroundColor: '$gray-100',
     position: 'fixed',
     top: 0,
     left: 0,
