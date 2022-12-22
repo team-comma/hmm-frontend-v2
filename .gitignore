@@ -47,6 +47,3 @@ out
 # 빌드시 같이 생성하므로 ignore에 추가합니다.
 sitemap.xml
 sitemap-0.xml
-
-# Vercel(For vercel deployment debug)
-.vercel
