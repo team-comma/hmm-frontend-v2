@@ -63,7 +63,7 @@ __metadata:
     "@types/react-dom": ^18.0.9
     eslint: 8.28.0
     eslint-config-next: 13.0.4
-    framer-motion: ^7.6.19
+    framer-motion: ^7.7.3
     next: 13.0.4
     next-compose-plugins: ^2.2.1
     next-images: ^1.8.4
@@ -2437,7 +2437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^7.6.19, framer-motion@npm:^7.7.3":
+"framer-motion@npm:^7.7.3":
   version: 7.10.3
   resolution: "framer-motion@npm:7.10.3"
   dependencies:

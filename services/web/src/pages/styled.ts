@@ -23,12 +23,14 @@ export const ServiceIntroContainer = styled('div', {
   display: 'flex',
   textAlign: 'left',
   flexDirection: 'column',
-  padding: '55px 33px 0',
+  padding: '55px 40px 0',
 });
 
 export const ServiceIntroWrapper = styled('div', {
+  width: '100%',
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
 });
 
 export const OnBoardingBottomSheet = styled('div', {
