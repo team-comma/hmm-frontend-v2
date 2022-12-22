@@ -21,9 +21,9 @@ export const ServiceIntroContainer = styled('div', {
   width: '100%',
   height: '100%',
   display: 'flex',
-  textAlign: 'center',
+  textAlign: 'left',
   flexDirection: 'column',
-  padding: '20px 0',
+  padding: '55px 33px 0',
 });
 
 export const OnBoardingBottomSheet = styled('div', {
@@ -40,15 +40,15 @@ export const OnBoardingBottomSheet = styled('div', {
 });
 
 export const Title = styled('h1', {
-  fontFamily: 'jua',
-  fontWeight: 'unset',
-  fontSize: '$x10',
-  lineHeight: '2.65rem',
+  fontWeight: '700',
+  fontSize: '$x8',
+  lineHeight: '2.3rem',
   marginBottom: '0.35em',
 });
 
 export const SubTitle = styled('p', {
-  fontWeight: '500',
+  fontWeight: '400',
+  lineHeight: '1.35rem',
 });
 
 export const Note = styled(motion.div, {
