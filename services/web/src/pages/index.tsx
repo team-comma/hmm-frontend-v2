@@ -13,16 +13,6 @@ import ServiceIconSVG from '@/src/assets/service.svg';
 import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {
-  const getNoteAnimationVariants = () => ({
-    animate: {
-      rotate: 20,
-      transition: {
-        duration: 0.3,
-        yoyo: Infinity,
-      },
-    },
-  });
-
   const getServiceIntroVariants = () => ({
     initial: { x: -30, y: -10, opacity: 0 },
     animate: {
