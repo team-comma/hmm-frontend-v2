@@ -9,14 +9,12 @@
   },
   "scripts": {
     "lint": "eslint \"{services,packages}/**/*.{js,jsx,ts,tsx}\" --fix --cache",
+    "dev:web": "yarn workspace web run dev",
     "prepare": "husky install",
-    "new": "scripts/init.sh",
-    "@comma/admin": "yarn workspace @comma/admin",
-    "@comma/web": "yarn workspace @comma/web"
+    "new": "scripts/init.sh"
   },
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@3.3.0",
   "devDependencies": {
-    "@next/eslint-plugin-next": "^13.0.6",
     "@types/react": "^18.0.26",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",

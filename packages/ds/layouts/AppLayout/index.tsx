@@ -7,7 +7,11 @@ interface AppLayoutProps {
 }
 
 export const AppLayoutComponent = ({ children }: AppLayoutProps) => {
-  return <S.AppLayoutContainer>{children}</S.AppLayoutContainer>;
+  return (
+    <S.AppLayoutContainer>
+      <div>{children}</div>
+    </S.AppLayoutContainer>
+  );
 };
 
 export const AppLayout = Object.assign(AppLayoutComponent, {
