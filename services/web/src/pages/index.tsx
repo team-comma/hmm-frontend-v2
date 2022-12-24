@@ -11,6 +11,7 @@ import HomeIconSVG from '@/src/assets/home.svg';
 import KakaoIconSVG from '@/src/assets/kakao.svg';
 import ServiceIconSVG from '@/src/assets/service.svg';
 
+import { ENV } from '../constants';
 import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {
@@ -25,6 +26,11 @@ const OnBoardingPage: NextPage = () => {
       transition: { delay: 1 / 50 },
     },
   });
+
+  const onClickKaKaoLogin = () => {
+    const KAKAO_URL = `${ENV.KAKAO_AUTH_URI}?response_type=${ENV.KAKAO_RESPONSE_TYPE}&client_id=${ENV.KAKAO_CLIENT_ID}&redirect_uri=${ENV.REDIRECT_URI}`;
+    router.replace(KAKAO_URL);
+  };
 
   return (
     <AppLayout>
@@ -68,6 +74,7 @@ const OnBoardingPage: NextPage = () => {
             theme="kakao"
             interval
             fullWidth
+            onClick={onClickKaKaoLogin}
           >
             카카오로 시작하기
           </Button>
