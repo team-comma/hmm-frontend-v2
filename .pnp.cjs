@@ -132,6 +132,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-next", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:13.0.4"],\
             ["framer-motion", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:7.10.3"],\
+            ["jose", "npm:4.11.1"],\
             ["next", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:13.0.4"],\
             ["next-compose-plugins", "npm:2.2.1"],\
             ["next-images", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:1.8.4"],\
@@ -4181,6 +4182,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chalk", "npm:4.1.2"],\
             ["filelist", "npm:1.0.4"],\
             ["minimatch", "npm:3.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["jose", [\
+        ["npm:4.11.1", {\
+          "packageLocation": "./.yarn/cache/jose-npm-4.11.1-aad5be122b-cd15cba258.zip/node_modules/jose/",\
+          "packageDependencies": [\
+            ["jose", "npm:4.11.1"]\
           ],\
           "linkType": "HARD"\
         }]\
