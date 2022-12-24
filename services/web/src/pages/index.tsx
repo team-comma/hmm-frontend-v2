@@ -1,6 +1,7 @@
 import React from 'react';
 
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 
 import { AppLayout, Button, Image } from '@comma/ds';
 
@@ -13,6 +14,8 @@ import ServiceIconSVG from '@/src/assets/service.svg';
 import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {
+  const router = useRouter();
+
   const getServiceIntroVariants = () => ({
     initial: { x: -30, y: -10, opacity: 0 },
     animate: {
@@ -52,11 +55,17 @@ const OnBoardingPage: NextPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <S.IconButton icon={HomeIconSVG} size="md" />
-          <Button
-            theme="kakao"
-            icon={KakaoIconSVG}
+          <S.IconButton
             size="md"
+            icon={HomeIconSVG}
+            onClick={() => {
+              router.push('/home');
+            }}
+          />
+          <Button
+            size="md"
+            icon={KakaoIconSVG}
+            theme="kakao"
             interval
             fullWidth
           >
