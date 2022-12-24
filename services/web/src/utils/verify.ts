@@ -5,7 +5,6 @@ export const verify = async (
   secret: string
 ): Promise<JWTPayload | false> => {
   try {
-    // console.log(token, secret);
     const { payload } = await jwtVerify(
       token,
       new TextEncoder().encode(secret)
