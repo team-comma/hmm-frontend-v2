@@ -126,7 +126,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@comma/web", "workspace:services/web"],\
             ["@comma/ds", "workspace:packages/ds"],\
             ["@stitches/react", "virtual:dc2d47d31d269d14d3217ae81f8633b48127eff1876c81c6a80328dc2be6f237b9bb30408864d5f5d07d7cf8d6f332c74df926f78ad68f55087eea88eb14fd71#npm:1.2.8"],\
-            ["@types/node", "npm:18.11.9"],\
+            ["@types/node", "npm:18.11.17"],\
             ["@types/react", "npm:18.0.26"],\
             ["@types/react-dom", "npm:18.0.9"],\
             ["eslint", "npm:8.28.0"],\
@@ -1003,10 +1003,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.11.9", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.9-d21dd6ec05-cc0aae109e.zip/node_modules/@types/node/",\
+        ["npm:18.11.17", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.17-897ad73ae4-1933afd068.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.11.9"]\
+            ["@types/node", "npm:18.11.17"]\
           ],\
           "linkType": "HARD"\
         }]\
