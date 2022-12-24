@@ -12,6 +12,12 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             type="text/css"
           />
+          <link
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+            rel="stylesheet"
+            as="style"
+            crossOrigin=""
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

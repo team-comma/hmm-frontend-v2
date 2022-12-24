@@ -21,9 +21,16 @@ export const ServiceIntroContainer = styled('div', {
   width: '100%',
   height: '100%',
   display: 'flex',
-  textAlign: 'center',
+  textAlign: 'left',
   flexDirection: 'column',
-  padding: '20px 0',
+  padding: '55px 40px 0',
+});
+
+export const ServiceIntroWrapper = styled('div', {
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 });
 
 export const OnBoardingBottomSheet = styled('div', {
@@ -33,22 +40,22 @@ export const OnBoardingBottomSheet = styled('div', {
   position: 'fixed',
   justifyContent: 'space-between',
   background:
-    'linear-gradient(0deg, rgb(22, 26, 26, 0.9) 80%, hsla(0,0%,100%,0))',
+    'linear-gradient(0deg, rgb(255, 255, 255, 0.9) 80%, hsla(0,0%,100%,0))',
   padding: '20px 19px',
   gap: '10px',
   bottom: 0,
 });
 
 export const Title = styled('h1', {
-  fontFamily: 'jua',
-  fontWeight: 'unset',
-  fontSize: '$x10',
-  lineHeight: '2.65rem',
+  fontWeight: '700',
+  fontSize: '$x8',
+  lineHeight: '2.3rem',
   marginBottom: '0.35em',
 });
 
 export const SubTitle = styled('p', {
-  fontWeight: '500',
+  fontWeight: '400',
+  lineHeight: '1.35rem',
 });
 
 export const Note = styled(motion.div, {

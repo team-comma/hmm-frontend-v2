@@ -1,7 +1,8 @@
 export const reset = {
   '*': {
     margin: 0,
-    fontFamily: "'Spoqa Han Sans Neo', 'Noto Sans KR', 'sans-serif'",
+    fontFamily:
+      "'Pretendard', 'Spoqa Han Sans Neo', 'Noto Sans KR', 'sans-serif'",
   },
 
   [`*, *::before, *::after`]: {
@@ -14,7 +15,7 @@ export const reset = {
 
   body: {
     lineHeight: 1.5,
-    backgroundColor: '$primary-slate2',
+    backgroundColor: '$gray-100',
     position: 'fixed',
     top: 0,
     left: 0,
