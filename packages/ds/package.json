@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
@@ -15,9 +17,28 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-backgrounds": "^6.5.15",
+    "@storybook/addon-docs": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/addon-measure": "^6.5.15",
+    "@storybook/addon-outline": "^6.5.15",
+    "@storybook/addons": "^6.5.15",
+    "@storybook/builder-vite": "^0.2.6",
+    "@storybook/channel-postmessage": "^6.5.15",
+    "@storybook/channel-websocket": "^6.5.15",
+    "@storybook/client-api": "^6.5.15",
+    "@storybook/preview-web": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.1",
+    "babel-loader": "^8.3.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4"
