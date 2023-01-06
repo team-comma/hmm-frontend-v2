@@ -1,0 +1,151 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Intorudction/Getting Started" />
+
+# Gettign Started
+
+> 🔔 `@comma/ds` 라이브러리는 아직 배포된 라이브러리가 아니에요 !  
+> 따라서 아직은 `team-comma/frontend` 레파지토리 내에서만 사용할 수 있어요
+
+## Install
+
+`@comma/ds` 라이브러리를 사용하려는 프로젝트 `dependency`에 추가합니다
+
+```sh
+yarn add @comma/ds
+```
+
+## Setup
+
+### Fonts
+
+`@comma/ds`는 `Pretendard` 폰트를 사용하고 있어, 해당 폰트를 CDN 서버로부터 불러옵니다
+
+<!-- prettier-ignore -->
+```html
+<link rel="stylesheet" as="style" crossoriginhref="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
+```
+
+#### React
+
+`index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+
+    <title>@comma/ds</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+```
+
+---
+
+#### Next.js
+
+`pages/_document.tsx`
+
+```tsx
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+
+import { getCssText } from '@comma/ds';
+
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="ko">
+        <Head>
+          <link
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+            rel="stylesheet"
+            as="style"
+            crossOrigin=""
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+```
+
+### Global Styles
+
+`@comma/ds`는 `stiches` 스타일 라이브러리를 사용해 스타일을 관리하고 있어요  
+글로벌 스타일을 적용하기 위해 아래와 같이 `globalStyles()` 또는 `globalCss()` 함수를 적용해주세요
+
+<details>
+  <summary>React</summary>
+
+```tsx
+// src/App.tsx
+
+import React from 'react';
+
+import { globalStyles } from '@comma/ds';
+
+export const App: React.FC = () => {
+  globalStyles();
+
+  return <div>Hello, World!</div>;
+};
+```
+
+</details>
+
+<details>
+  <summary>Next.js</summary>
+
+```tsx
+// src/_document.tsx
+
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+
+import { getCssText } from '@comma/ds';
+
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="ko">
+        <Head>
+          <link
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+            rel="stylesheet"
+            as="style"
+            crossOrigin=""
+          />
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+```
+
+</details>
