@@ -96,6 +96,9 @@ module.exports = {
       },
     },
     ...generateESLintConfigForAllPackages(__dirname, {
+      'packages/ds': {
+        extends: ['plugin:storybook/recommend'],
+      },
       'services/web': {
         extends: ['plugin:@next/next/recommended'],
         settings: {
