@@ -10,15 +10,10 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {
-    "@stitches/react": "^1.2.8",
-    "framer-motion": "^7.7.3",
-    "next": "^13.0.6",
-    "react": "^18.2.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@mdx-js/react": "^1.6.22",
+    "@stitches/react": "^1.2.8",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-backgrounds": "^6.5.15",
     "@storybook/addon-docs": "^6.5.15",
@@ -39,8 +34,22 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.1",
     "babel-loader": "^8.3.0",
+    "framer-motion": "^8.5.3",
+    "next": "^13.1.5",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4"
+  },
+  "peerDependencies": {
+    "@stitches/react": "*",
+    "framer-motion": "*",
+    "next": "13.x",
+    "react": "18.x"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
   }
 }
