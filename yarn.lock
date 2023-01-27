@@ -1687,6 +1687,9 @@ __metadata:
     framer-motion: "*"
     next: 13.x
     react: 18.x
+  peerDependenciesMeta:
+    next:
+      optional: true
   languageName: unknown
   linkType: soft
 
