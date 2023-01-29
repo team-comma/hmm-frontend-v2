@@ -7,9 +7,9 @@ import { AppLayout, Button } from '@comma/ds';
 
 import { motion } from 'framer-motion';
 
-import HomeIconSVG from '@/src/assets/home.svg';
-import KakaoIconSVG from '@/src/assets/kakao.svg';
-import LeftArrowSVG from '@/src/assets/leftArrow.svg';
+import HomeIconSVG from '@/src/assets/svg/home.svg';
+import KakaoIconSVG from '@/src/assets/svg/kakao.svg';
+import LeftArrowSVG from '@/src/assets/svg/left-arrow.svg';
 
 import * as S from './styled';
 
