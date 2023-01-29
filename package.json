@@ -8,8 +8,8 @@
     ]
   },
   "scripts": {
+    "postinstall": "husky install",
     "lint": "eslint \"{services,packages}/**/*.{js,jsx,ts,tsx}\" --fix --cache",
-    "prepare": "husky install",
     "new": "scripts/init.sh",
     "@comma/ds": "yarn workspace @comma/ds",
     "@comma/admin": "yarn workspace @comma/admin",

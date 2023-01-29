@@ -1699,12 +1699,13 @@ __metadata:
   dependencies:
     "@comma/ds": "workspace:^"
     "@stitches/react": ^1.2.8
-    "@types/node": 18.11.9
+    "@types/node": ^18.11.17
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.0.9
     eslint: 8.28.0
     eslint-config-next: 13.0.4
     framer-motion: ^8.5.3
+    jose: ^4.11.1
     next: 13.0.4
     next-compose-plugins: ^2.2.1
     next-images: ^1.8.4
@@ -4242,17 +4243,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^18.11.17":
   version: 18.11.18
   resolution: "@types/node@npm:18.11.18"
   checksum: 03f17f9480f8d775c8a72da5ea7e9383db5f6d85aa5fefde90dd953a1449bd5e4ffde376f139da4f3744b4c83942166d2a7603969a6f8ea826edfb16e6e3b49d
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:18.11.9":
-  version: 18.11.9
-  resolution: "@types/node@npm:18.11.9"
-  checksum: cc0aae109e9b7adefc32eecb838d6fad931663bb06484b5e9cbbbf74865c721b03d16fd8d74ad90e31dbe093d956a7c2c306ba5429ba0c00f3f7505103d7a496
   languageName: node
   linkType: hard
 
@@ -10971,6 +10965,13 @@ __metadata:
     merge-stream: ^2.0.0
     supports-color: ^8.0.0
   checksum: 98cd68b696781caed61c983a3ee30bf880b5bd021c01d98f47b143d4362b85d0737f8523761e2713d45e18b4f9a2b98af1eaee77afade4111bb65c77d6f7c980
+  languageName: node
+  linkType: hard
+
+"jose@npm:^4.11.1":
+  version: 4.11.2
+  resolution: "jose@npm:4.11.2"
+  checksum: bc9b2271c31683603857b2fd2903afa29f826fffd4bcefc0845355ed86995def87eaadf502033207996109d76698c912e5a986e279326d9629321a50504fe466
   languageName: node
   linkType: hard
 

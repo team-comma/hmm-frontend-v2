@@ -10,6 +10,6 @@
     "jsx": "preserve",
     "skipLibCheck": true
   },
-  "include": ["images.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["./src/@types/*.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

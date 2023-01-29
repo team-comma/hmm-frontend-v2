@@ -11,6 +11,7 @@ import HomeIconSVG from '@/src/assets/svg/home.svg';
 import KakaoIconSVG from '@/src/assets/svg/kakao.svg';
 import LeftArrowSVG from '@/src/assets/svg/left-arrow.svg';
 
+import { ENV } from '../constants';
 import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {

@@ -4207,12 +4207,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@comma/web", "workspace:services/web"],\
             ["@comma/ds", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#workspace:packages/ds"],\
             ["@stitches/react", "virtual:dc2d47d31d269d14d3217ae81f8633b48127eff1876c81c6a80328dc2be6f237b9bb30408864d5f5d07d7cf8d6f332c74df926f78ad68f55087eea88eb14fd71#npm:1.2.8"],\
-            ["@types/node", "npm:18.11.9"],\
+            ["@types/node", "npm:18.11.18"],\
             ["@types/react", "npm:18.0.26"],\
             ["@types/react-dom", "npm:18.0.9"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-next", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:13.0.4"],\
             ["framer-motion", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:8.5.3"],\
+            ["jose", "npm:4.11.2"],\
             ["next", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:13.0.4"],\
             ["next-compose-plugins", "npm:2.2.1"],\
             ["next-images", "virtual:00684241c0154316e336dfce7ea52e7932ed7aec1afaa1346a0d3fe0eba6eba94b2676e7ec500b2ed185db3c4c8bf2ae20d7b24c5ff1ae6ca7faa8064147816f#npm:1.8.4"],\
@@ -7865,13 +7866,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-18.11.18-d61e8a4a20-03f17f9480.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:18.11.18"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:18.11.9", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.9-d21dd6ec05-cc0aae109e.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.11.9"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16099,6 +16093,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.11.18"],\
             ["merge-stream", "npm:2.0.0"],\
             ["supports-color", "npm:8.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["jose", [\
+        ["npm:4.11.2", {\
+          "packageLocation": "./.yarn/cache/jose-npm-4.11.2-f3f8bb7bbb-bc9b2271c3.zip/node_modules/jose/",\
+          "packageDependencies": [\
+            ["jose", "npm:4.11.2"]\
           ],\
           "linkType": "HARD"\
         }]\

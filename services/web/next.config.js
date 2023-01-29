@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: false,
-  pageExtensions: ['tsx'],
+  pageExtensions: ['tsx', 'api.ts'],
   experimental: {
     transpilePackages: ['@comma/ds'],
   },
