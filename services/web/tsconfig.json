@@ -11,6 +11,6 @@
     "skipLibCheck": true,
     "typeRoots": ["./src/@types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/@types/*.d.ts"],
+  "include": ["./src/@types/*.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
