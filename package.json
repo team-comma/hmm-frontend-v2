@@ -11,6 +11,7 @@
     "postinstall": "husky install",
     "lint": "eslint \"{services,packages}/**/*.{js,jsx,ts,tsx}\" --fix --cache",
     "new": "scripts/init.sh",
+    "@comma/ds": "yarn workspace @comma/ds",
     "@comma/admin": "yarn workspace @comma/admin",
     "@comma/web": "yarn workspace @comma/web"
   },
@@ -28,6 +29,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.10",
     "husky": "^8.0.2",
     "hygen": "^6.2.11",
     "lint-staged": "^13.0.3",

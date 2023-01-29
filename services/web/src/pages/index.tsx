@@ -1,83 +1,76 @@
 import React from 'react';
 
 import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import { AppLayout, Button, Image } from '@comma/ds';
+import { AppLayout, Button } from '@comma/ds';
 
 import { motion } from 'framer-motion';
 
-import HomeIconSVG from '@/src/assets/home.svg';
-import KakaoIconSVG from '@/src/assets/kakao.svg';
-import ServiceIconSVG from '@/src/assets/service.svg';
+import HomeIconSVG from '@/src/assets/svg/home.svg';
+import KakaoIconSVG from '@/src/assets/svg/kakao.svg';
+import LeftArrowSVG from '@/src/assets/svg/left-arrow.svg';
 
 import { ENV } from '../constants';
 import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {
-  const router = useRouter();
-
-  const getServiceIntroVariants = () => ({
-    initial: { x: -30, y: -10, opacity: 0 },
-    animate: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: { delay: 1 / 50 },
-    },
-  });
-
-  const onClickKaKaoLogin = () => {
-    const KAKAO_URL = `${ENV.KAKAO_AUTH_URI}?response_type=${ENV.KAKAO_RESPONSE_TYPE}&client_id=${ENV.KAKAO_CLIENT_ID}&redirect_uri=${ENV.REDIRECT_URI}`;
-    router.replace(KAKAO_URL);
-  };
-
   return (
     <AppLayout>
+      <S.OnBoardingHeader>
+        <Image src={LeftArrowSVG} alt="" />
+      </S.OnBoardingHeader>
       <S.OnBoardingContainer>
-        <S.ServiceIntroWrapper>
-          <S.ServiceIntroContainer
-            as={motion.div}
-            variants={getServiceIntroVariants()}
-            initial="initial"
-            animate="animate"
+        <S.ServiceIntroContainer>
+          <motion.svg
+            style={{ display: 'inline' }}
+            width="83"
+            height="33"
+            viewBox="0 0 83 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <S.Title>
-              흠과 함께
-              <br />
-              하는 점심시간!
-            </S.Title>
-            <S.SubTitle>
-              누구도 모르게 내가 점심 시간에
-              <br /> 듣고 싶은 노래를 공유해봐요
-            </S.SubTitle>
-          </S.ServiceIntroContainer>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <Image src={ServiceIconSVG} alt="service 온보딩 이미지" />
-          </motion.div>
-        </S.ServiceIntroWrapper>
-        <S.OnBoardingBottomSheet
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <S.IconButton
-            size="md"
-            icon={HomeIconSVG}
-            onClick={() => {
-              router.push('/home');
+            <motion.path
+              d="M29.25 14.3349C30.9167 15.2972 30.9167 17.7028 29.25 18.6651L12 28.6244C10.3333 29.5866 8.25 28.3838 8.25 26.4593L8.25001 6.5407C8.25001 4.6162 10.3333 3.41339 12 4.37564L29.25 14.3349Z"
+              fill="black"
+            />
+            <motion.path
+              d="M54.25 14.3349C55.9167 15.2972 55.9167 17.7028 54.25 18.6651L37 28.6244C35.3333 29.5866 33.25 28.3838 33.25 26.4593L33.25 6.5407C33.25 4.6162 35.3333 3.41339 37 4.37564L54.25 14.3349Z"
+              fill="black"
+            />
+            <motion.path
+              d="M79.25 14.3349C80.9167 15.2972 80.9167 17.7028 79.25 18.6651L62 28.6244C60.3333 29.5866 58.25 28.3838 58.25 26.4593L58.25 6.5407C58.25 4.6162 60.3333 3.41339 62 4.37564L79.25 14.3349Z"
+              fill="black"
+            />
+          </motion.svg>
+          <S.Title>흠, 우리 같이 노래 들을래요?</S.Title>
+          <S.SubTitle>
+            내 취향에 맞는 음악을
+            <br /> 많은 사람들과 함께 공유해보세요
+          </S.SubTitle>
+        </S.ServiceIntroContainer>
+        <S.OnBoardingBottomSheet>
+          <p
+            style={{
+              opacity: 0.6,
+              marginBottom: '0.5rem',
+              fontSize: '0.9rem',
             }}
-          />
-          <Button
-            size="md"
-            icon={KakaoIconSVG}
-            theme="kakao"
-            interval
-            fullWidth
-            onClick={onClickKaKaoLogin}
           >
-            카카오로 시작하기
-          </Button>
+            간편하게 SNS로 로그인
+          </p>
+          <S.BottomSheetContainer>
+            <S.IconButton icon={HomeIconSVG} size="md" />
+            <Button
+              theme="kakao"
+              icon={KakaoIconSVG}
+              size="md"
+              interval
+              fullWidth
+            >
+              카카오로 시작하기
+            </Button>
+          </S.BottomSheetContainer>
         </S.OnBoardingBottomSheet>
       </S.OnBoardingContainer>
     </AppLayout>

@@ -6,9 +6,8 @@
       "@/*": ["./*"]
     },
     "incremental": true,
-    "esModuleInterop": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   },
-  "include": ["stitches.config.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["lib", "index.ts"],
   "exclude": ["node_modules"]
 }
