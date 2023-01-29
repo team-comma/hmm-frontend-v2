@@ -1,6 +1,7 @@
 import React from 'react';
 
 import type { NextPage } from 'next';
+import Image from 'next/image';
 
 import { AppLayout, Button } from '@comma/ds';
 
@@ -11,7 +12,6 @@ import KakaoIconSVG from '@/src/assets/kakao.svg';
 import LeftArrowSVG from '@/src/assets/leftArrow.svg';
 
 import * as S from './styled';
-import Image from 'next/image';
 
 const OnBoardingPage: NextPage = () => {
   return (
