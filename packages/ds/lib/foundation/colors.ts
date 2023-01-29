@@ -2,6 +2,7 @@ export const colors = {
   'colors-basic': {
     black: '#000000',
     white: '#ffffff',
+    gray: '#d9dee5',
   },
   'colors-point': {
     positive: '#00c400',

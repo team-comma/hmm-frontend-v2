@@ -3,8 +3,8 @@ import { styled } from '../../stitches.config';
 export const AppLayoutContainer = styled('main', {
   height: '100%',
   margin: '0px auto',
-  maxWidth: '29rem',
-  padding: '0.5rem 0.5rem 0 0.5rem',
+  maxWidth: '28rem',
+  padding: '0 1.4rem',
   backgroundColor: '$basic-white',
   color: '$basic-black',
 });

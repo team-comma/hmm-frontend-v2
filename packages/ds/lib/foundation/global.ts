@@ -1,11 +1,12 @@
 export const reset = {
   '*': {
-    margin: 0,
     fontFamily:
       "'Pretendard', 'Spoqa Han Sans Neo', 'Noto Sans KR', 'sans-serif'",
   },
 
   [`*, *::before, *::after`]: {
+    margin: 0,
+    padding: 0,
     boxSizing: 'border-box',
   },
 
@@ -15,12 +16,23 @@ export const reset = {
 
   body: {
     lineHeight: 1.5,
-    backgroundColor: '$gray-100',
+    backgroundColor: '$basic-gray',
     position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
+  },
+
+  button: {
+    margin: 0,
+    border: 'none',
+    borderRadius: 0,
+    boxShadow: 'none',
+    cursor: 'pointer',
+    padding: 0,
+    background: 'inherit',
+    overflow: 'visible',
   },
 
   [`img, picture, video, canvas, svg`]: {
