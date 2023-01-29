@@ -2,77 +2,64 @@ import type { NextMiddleware, NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 import {
+  PROTECTED_PAGES,
   PROTECTED_REDIRECT_URL,
-  PRIVATE_REDIRECT_URL,
-  PRIVATE_PAGE_URL,
-  PROTECTED_PAGE_URL,
+  PROTECTED_REDIRECT_URL_FOR_LOGIN,
 } from './constants';
 import { verify } from './utils';
 
 export const middleware: NextMiddleware = async (req: NextRequest) => {
   const { TOKEN_KEY, JWT_SECRET_KEY } = process.env;
+  const { pathname, searchParams, host, protocol } = req.nextUrl;
+
+  const generateUrl = (path: string) => `${protocol}//${host}${path}`;
 
   if (!TOKEN_KEY || !JWT_SECRET_KEY)
     throw new Error(
       'process.env.TOKEN_KEY or JWT_SECRET_KEY not defined. Check your environment variables.'
     );
 
-  const AUTH_TOKEN = req.cookies.get(TOKEN_KEY);
+  // Next.js static 파일인 경우 허용
+  if (pathname.includes('_next')) return;
 
-  if (req.nextUrl.pathname.startsWith('/login')) {
-    const REFRESH_TOKEN = req.nextUrl.searchParams.get('refreshToken') ?? '';
-    const NEXT_URL = req.nextUrl.clone();
+  if (pathname.startsWith('/login')) {
+    const refreshTokenFromQuery = searchParams.get('refreshToken') ?? '';
 
-    NEXT_URL.pathname = REFRESH_TOKEN
-      ? PROTECTED_REDIRECT_URL
-      : PRIVATE_REDIRECT_URL;
-    NEXT_URL.search = '';
+    const redirectUrl = refreshTokenFromQuery
+      ? PROTECTED_REDIRECT_URL_FOR_LOGIN
+      : PROTECTED_REDIRECT_URL;
 
-    const res = NextResponse.redirect(NEXT_URL);
+    const url = generateUrl(redirectUrl);
+    const response = NextResponse.redirect(new URL(url));
 
-    if (REFRESH_TOKEN) {
-      res.cookies.set(TOKEN_KEY, REFRESH_TOKEN, {
+    if (refreshTokenFromQuery)
+      response.cookies.set(TOKEN_KEY, refreshTokenFromQuery, {
         httpOnly: true,
         sameSite: 'strict',
         path: '/',
       });
-    }
 
-    return res;
+    return response;
   }
 
-  const isAccessAllowed = (path: string[], redirect: string) => {
-    const { pathname } = req.nextUrl;
-    const isAllowed = path.includes(pathname);
+  const refreshToken = req.cookies.get(TOKEN_KEY);
 
-    if (!isAllowed) return;
+  let redirectUrl = PROTECTED_REDIRECT_URL;
 
-    const URL = req.nextUrl.clone();
-    URL.pathname = redirect;
-    URL.search = '';
+  // 로그인 유저인 경우
+  if (refreshToken) {
+    const isValidJWT = await verify(refreshToken.value, JWT_SECRET_KEY);
+    // 올바른 리프레시 토큰 + 허용된 경로 접근 시 -> 허용
+    if (isValidJWT && PROTECTED_PAGES.includes(pathname)) return;
 
-    return NextResponse.redirect(URL);
-  };
-
-  // 토큰이 있을 경우
-  if (AUTH_TOKEN) {
-    const IS_JWT_VALID = await verify(AUTH_TOKEN.value, JWT_SECRET_KEY);
-
-    // 토큰 검증
-    if (IS_JWT_VALID) {
-      return isAccessAllowed(PROTECTED_PAGE_URL, PROTECTED_REDIRECT_URL);
-    } else {
-      return isAccessAllowed(PRIVATE_PAGE_URL, PRIVATE_REDIRECT_URL);
-    }
-  } else {
-    const { pathname } = req.nextUrl;
-    if (!PRIVATE_PAGE_URL.includes(pathname)) return;
-
-    const URL = req.nextUrl.clone();
-
-    URL.pathname = PRIVATE_REDIRECT_URL;
-    URL.search = '';
-
-    return NextResponse.redirect(URL);
+    // 변조된 리프레시 토큰 또는 허용되지 않은 경로 접근 시 -> 리다이렉트 URL 수정
+    redirectUrl = PROTECTED_REDIRECT_URL_FOR_LOGIN;
   }
+
+  // 비로그인 유저인 경우, 로그인 유저만 접근 가능한 경로에 접근하는 경우가 아닌 경우 -> 허용
+  if (!refreshToken && !PROTECTED_PAGES.includes(pathname)) return;
+
+  // 위 로직에서 핸들링되지 않은 경우 -> 최종 리다이렉트
+  const url = generateUrl(redirectUrl);
+  return NextResponse.redirect(new URL(url));
 };

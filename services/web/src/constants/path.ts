@@ -1,5 +1,5 @@
-export const PRIVATE_PAGE_URL = ['/home'];
-export const PRIVATE_REDIRECT_URL = '/';
+// 로그인 유저의 접근 허용 경로
+export const PROTECTED_PAGES = ['/home'];
+export const PROTECTED_REDIRECT_URL = '/';
 
-export const PROTECTED_PAGE_URL = ['/'];
-export const PROTECTED_REDIRECT_URL = '/home';
+export const PROTECTED_REDIRECT_URL_FOR_LOGIN = '/home';
