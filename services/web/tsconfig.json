@@ -8,8 +8,7 @@
     "incremental": true,
     "esModuleInterop": true,
     "jsx": "preserve",
-    "skipLibCheck": true,
-    "typeRoots": ["./src/@types"]
+    "skipLibCheck": true
   },
   "include": ["./src/@types/*.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
