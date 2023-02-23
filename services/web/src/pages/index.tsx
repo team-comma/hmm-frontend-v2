@@ -2,18 +2,26 @@ import React from 'react';
 
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import { AppLayout, Button } from '@comma/ds';
 
 import { motion } from 'framer-motion';
 
 import HomeIconSVG from '@/src/assets/svg/home.svg';
-import KakaoIconSVG from '@/src/assets/svg/kakao.svg';
 import LeftArrowSVG from '@/src/assets/svg/left-arrow.svg';
 
 import * as S from './styled';
 
 const OnBoardingPage: NextPage = () => {
+  const router = useRouter();
+
+  const NAVER_URL = 'http://localhost:4000/api/auth/login/naver';
+
+  const handleClickRedirectToNaver = () => {
+    router.push(NAVER_URL);
+  };
+
   return (
     <AppLayout>
       <S.OnBoardingHeader>
@@ -61,13 +69,13 @@ const OnBoardingPage: NextPage = () => {
           <S.BottomSheetContainer>
             <S.IconButton icon={HomeIconSVG} size="md" />
             <Button
-              theme="kakao"
-              icon={KakaoIconSVG}
+              theme="naver"
               size="md"
               interval
               fullWidth
+              onClick={handleClickRedirectToNaver}
             >
-              카카오로 시작하기
+              네이버로 시작하기
             </Button>
           </S.BottomSheetContainer>
         </S.OnBoardingBottomSheet>
