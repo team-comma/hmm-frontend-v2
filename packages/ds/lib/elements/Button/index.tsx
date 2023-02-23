@@ -3,7 +3,7 @@ import { Variants } from 'framer-motion';
 import { Image, ImageProps } from '../Image';
 import * as S from './styled';
 
-type SocialType = 'kakao';
+type SocialType = 'kakao' | 'naver';
 
 type ButtonThemeType = 'default';
 

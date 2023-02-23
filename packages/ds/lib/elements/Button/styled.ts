@@ -20,6 +20,10 @@ export const ButtonElement = styled(motion.button, {
         backgroundColor: '#fff500',
         color: '$basic-black',
       },
+      naver: {
+        backgroundColor: '#5ac467',
+        color: '$basic-white',
+      },
     },
     fw: {
       true: {
