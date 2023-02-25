@@ -12,12 +12,7 @@ export interface UserProfileResponse {
   birthday: string;
 }
 
-export const getUserProfile = async (): Promise<
-  APIResponse<UserProfileResponse>
-> => {
-  const { data } = await instace.get<APIResponse<UserProfileResponse>>(
-    API_SUFFIX.USER_PROFILE
-  );
-
-  return data;
-};
+export const getUserProfile = async (): Promise<UserProfileResponse> =>
+  await instace
+    .get<APIResponse<UserProfileResponse>>(API_SUFFIX.USER_PROFILE)
+    .then((res) => res.data.result);
